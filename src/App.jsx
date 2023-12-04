@@ -4,9 +4,11 @@ function Cv(){
 
     <>
     <h1>The grade sheet</h1>
-    <ol>
-      <li>The marks index is marks{marks[0 ]}</li>
-    </ol>
+    <ul>
+      {
+        marks.map((m,index)=><li key={index}>{m<=50 ? 'pass' : 'fail'}</li>)
+      }
+    </ul>
     </>
   )
 }
